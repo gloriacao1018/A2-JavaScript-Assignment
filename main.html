@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2 JavaScript Assignment
-    </title>
+    <title>A2 JavaScript Assignment</title>
+    <script src="main.js"></script>
 </head>
 <body>
-    
+    <h1>Site Visitors for the Last 6 Months</h1>
 
-    
+  <table id="visitor-table">
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Visitors</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+  </table>
+
+  <h2>Update Visitor Data</h2>
+  <form id="data-form">
+    <label for="month">Month:</label>
+    <input type="text" id="month" placeholder="Spell it Outtttt">
+    <label for="visitors">Visitors:</label>
+    <input type="number" id="visitors" placeholder="Use that numberrrr">
+    <button type="button" onclick="updateVisitorData()">Update</button>
+  </form>
 </body>
 </html>
