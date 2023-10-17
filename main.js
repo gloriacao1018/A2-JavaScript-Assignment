@@ -46,5 +46,23 @@ document.addEventListener('DOMContentLoaded', function () {
       
   
     createVisitorTable(visitorData);
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesLink = document.getElementById('accept-cookies');
+    const revokeCookiesDiv = document.getElementById('revoke-cookies-div');
+
+    acceptCookiesLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        cookieBanner.innerHTML = 'Cookies were accepted. Would you like to revoke? <a href="#" id="revoke-cookies"></a>';
+        revokeCookiesDiv.style.display = 'block';
+    });
+
+    revokeCookiesDiv.querySelector('#revoke-cookies').addEventListener('click', function (event) {
+        event.preventDefault();
+        cookieBanner.innerHTML = 'We use cookies to improve your experience!!<br> <a href="#" id="accept-cookies">Accept Cookies</a>';
+        revokeCookiesDiv.style.display = 'none';
+    });
+
+
   });
   
