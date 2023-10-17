@@ -63,6 +63,43 @@ document.addEventListener('DOMContentLoaded', function () {
         revokeCookiesDiv.style.display = 'none';
     });
 
+    const siteBody = document.body;
+    let isHighContrast = false;
+    
+    const toggleButton = document.getElementById('contrast-toggle');
+    toggleButton.addEventListener('click', function () {
+        isHighContrast = !isHighContrast;
+    
+        if (isHighContrast) {
+            siteBody.style.backgroundColor = '#000';
+            siteBody.style.color = '#fff';
+            siteBody.style.padding = '20px';
+            siteBody.style.lineHeight = '3';
+            siteBody.style.letterSpacing = '6px';
+            siteBody.style.fontSize = '20px';
+            adjustTextStyles(true);
+        } else {
+            siteBody.style.backgroundColor = '';
+            siteBody.style.color = '';
+            siteBody.style.padding = '20px';
+            siteBody.style.lineHeight = '1';
+            siteBody.style.letterSpacing = '1px';
+            siteBody.style.fontSize = '16px';
+            adjustTextStyles(false);
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.code == 'KeyA' && (event.ctrlKey || event.metaKey)) {
+          alert('Unlock High Contrast Mode!')
+          toggleButton.click();
+          event.preventDefault();
+        } else if (event.code === 'KeyZ' && (event.ctrlKey || event.metaKey)) {
+            isHighContrast = isHighContrast; 
+            toggleButton.click();
+            event.preventDefault();
+        }
+      });
 
   });
   
