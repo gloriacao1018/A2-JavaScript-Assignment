@@ -1,0 +1,45 @@
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+  }
+  
+  .toggle-switch button {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border: 1px solid #777;
+    border-radius: 34px;
+  }
+  
+  .toggle-switch button::before {
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  .on {
+    border: 1px solid #2196F3;
+    background-color: #2196F3;
+  }
+  
+  .on::before {
+    transform: translateX(26px);
+  }
+  
+  .off::before {
+    transform: translateX(0);
+  }
+  

@@ -65,10 +65,11 @@ const visitorData = {
     });
 
     ////
+    const toggleButton = document.getElementById('contrast-toggle');
     const siteBody = document.body;
     let isHighContrast = false;
     
-    const toggleButton = document.getElementById('contrast-toggle');
+    
     toggleButton.addEventListener('click', function () {
         isHighContrast = !isHighContrast;
     
@@ -81,7 +82,6 @@ const visitorData = {
             siteBody.style.fontSize = '20px';
             siteBody.style.fontStyle = 'Bold'
             toggleButton.textContent = 'Go Back!';
-           
         } else {
             siteBody.style.backgroundColor = '';
             siteBody.style.color = '';
@@ -91,8 +91,8 @@ const visitorData = {
             siteBody.style.fontSize = '';
             siteBody.style.fontStyle = ''
             toggleButton.textContent = 'Unlock High Contrast Mode!!!'; 
-    
         }
+        toggleButton.classList.toggle('on');
     });
 
     document.addEventListener('keydown', function(event) {
