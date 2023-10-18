@@ -9,35 +9,34 @@
 <body>
     <h1>Site Visitors for the Last 6 Months</h1>
 
-  <table id="visitor-table">
-    <thead>
-      <tr>
-        <th>Month</th>
-        <th>Visitors</th>
-      </tr>
-    </thead>
-    <tbody id="table-body">
-    </tbody>
-  </table>
+    <table id="visitor-table">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Visitors</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+   
+      <h2>Update Visitor Data</h2>
+      <form id="data-form">
+        <label for="month">Month:</label>
+        <input type="text" id="month" placeholder="Spell it Outtttt">
+        <label for="visitors">Visitors:</label>
+        <input type="number" id="visitors" placeholder="Use that numberrrr">
+        <button type="button" onclick="updateVisitorData()">Update</button>
+      </form>
 
-  <h2>Update Visitor Data</h2>
-  <form id="data-form">
-    <label for="month">Month:</label>
-    <input type="text" id="month" placeholder="Spell it Outtttt">
-    <label for="visitors">Visitors:</label>
-    <input type="number" id="visitors" placeholder="Use that numberrrr">
-    <button type="button" onclick="updateVisitorData()">Update</button>
-  </form>
-
-
-  
   <div id="cookie-banner" class="cookie-banner">
     <p>We use cookies to improve your experience!!</p>
     <p><a href="#" id="accept-cookies">Accept Cookies</a></p>
   </div>
 
   <div id="revoke-cookies-div" style="display: none;">
-    <p><a href="#" id="revoke-cookies">Revoke Cookies</a></p>
+    <p>Cookies were accepted. Would you like to revoke?</p>
+    <p><a href="#" id="revoke-cookies">Revoke! Regretted it!!</a></p>
   </div> 
 
 
